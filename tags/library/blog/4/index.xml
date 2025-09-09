@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Library on tane.dev</title><link>https://tane.dev/tags/library/</link><description>Recent content in Library on tane.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>This work is copyright Tane Piper</copyright><lastBuildDate>Sat, 13 Feb 2021 12:00:00 +0100</lastBuildDate><atom:link href="https://tane.dev/tags/library/index.xml" rel="self" type="application/rss+xml"/><item><title>Ngx-EditorJS library for Angular</title><link>https://tane.dev/2019/05/ngx-editorjs-library-for-angular/</link><pubDate>Fri, 10 May 2019 15:00:00 +0100</pubDate><guid>https://tane.dev/2019/05/ngx-editorjs-library-for-angular/</guid><description>&lt;p>Today I have published my first full Angular module - &lt;code>@tinynodes/ngx-editorjs&lt;/code> on &lt;a href="https://www.npmjs.com/package/@tinynodes/ngx-editorjs" target="_blank">NPM&lt;/a>
+.&lt;/p>
+&lt;p>The module is a set of features for Angular (7+) to create and control &lt;a href="https://editorjs.io" target="_blank">EditorJS&lt;/a>
+instances.&lt;/p>
+&lt;p>A &lt;a href="https://tinynodes-ngx.firebaseapp.com/ngx-editorjs-demo" target="_blank">demo application&lt;/a>
+is available to see the editor in action, and the source is also available in the &lt;a href="https://github.com/tanepiper/ngx-tinynodes" target="_blank">&lt;code>@tinynodes&lt;/code> monorepo&lt;/a>
+.&lt;/p>
+&lt;h2 id="included-features">Included Features&lt;/h2>
+&lt;p>The library exports several features once the &lt;code>NgxEditorJSModule&lt;/code> has been included in your project.&lt;/p>
+&lt;h4 id="ngxeditorjsdirective">NgxEditorJSDirective&lt;/h4>
+&lt;p>This is the main directive which can be used on any element with the &lt;code>[ngxEditorJS]&lt;/code> selector and and &lt;code>id&lt;/code> attribute.&lt;/p></description></item><item><title>Providing injectable features to Angular modules</title><link>https://tane.dev/2019/03/providing-injectable-features-to-angular-modules/</link><pubDate>Thu, 14 Mar 2019 20:30:00 +0100</pubDate><guid>https://tane.dev/2019/03/providing-injectable-features-to-angular-modules/</guid><description>&lt;p>Working with &lt;a href="https://angular.io/" target="_blank">Angular&lt;/a>
+and &lt;a href="https://www.typescriptlang.org/" target="_blank">Typescript&lt;/a>
+; as I have refactored and re-written components I&amp;rsquo;ve been learning to take advantage of one of the more powerful features - dependency injection.&lt;/p>
+&lt;p>Building Angular components, most developers will have already used this to inject features like the HTTP client or the FormBuilder to be used in a component. A common service example might look like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">Injectable&lt;/span> } &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;@angular/core&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">HttpClient&lt;/span>, &lt;span style="color:#a6e22e">HttpResponse&lt;/span> } &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;@angular/common/http&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">Observable&lt;/span> } &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;rxjs&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">@Injectable&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">export&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">RequestService&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">constructor&lt;/span>(&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">readonly&lt;/span> &lt;span style="color:#a6e22e">http&lt;/span>: &lt;span style="color:#66d9ef">HttpClient&lt;/span>) {}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#a6e22e">getExample&lt;/span>()&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">Observable&lt;/span>&amp;lt;&lt;span style="color:#f92672">HttpResponse&lt;/span>&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">this&lt;/span>.&lt;span style="color:#a6e22e">http&lt;/span>.&lt;span style="color:#66d9ef">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/api/example&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Angular&amp;rsquo;s own features can be injected via their class identity (e.g. &lt;code>HttpClient&lt;/code>). You can also inject any components, services or pipes that are registered within a module.&lt;/p></description></item><item><title>New blog ('Hey I'm Moving From Medium')</title><link>https://tane.dev/2019/03/new-blog-hey-im-moving-from-medium/</link><pubDate>Tue, 12 Mar 2019 19:40:00 +0100</pubDate><guid>https://tane.dev/2019/03/new-blog-hey-im-moving-from-medium/</guid><description>&lt;p>Buying a new domain is always a good excuse to do something with it, so of course grabbing my &lt;code>.dev&lt;/code> seemed like a perfect idea
+to set up a new blog. Also recently I&amp;rsquo;ve been dissatisfied with the way &lt;a href="https://medium.com" target="_blank">Medium&lt;/a>
+has dealt with recent changes
+(although I&amp;rsquo;m not going to go into all the reasons except to say I&amp;rsquo;d rather own and control all my content).&lt;/p>
+&lt;p>The site is Markdown powered, generated with &lt;a href="https://gohugo.io/" target="_blank">Hugo&lt;/a>
+and served via &lt;a href="https://github.com" target="_blank">GitHub&lt;/a>
+Pages with a CI deployment.
+I plan to keep the blog light and tracking free as possible (but I would like to know if anyone is reading at some point).&lt;/p></description></item></channel></rss>

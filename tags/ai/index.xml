@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on tane.dev</title><link>https://tane.dev/tags/ai/</link><description>Recent content in AI on tane.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>This work is copyright Tane Piper</copyright><lastBuildDate>Fri, 14 Apr 2023 00:50:00 +0100</lastBuildDate><atom:link href="https://tane.dev/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Slack wants you you know this privacy exploit is fine</title><link>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</link><pubDate>Mon, 25 Sep 2023 19:50:00 +0100</pubDate><guid>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</guid><description>&lt;p>Last week, after a call with the engineers on my team I wanted to send a message to two of the engineers at the same time - little did I know I&amp;rsquo;d find what I believe to be a nasty privacy exploit in &lt;a href="https://slack.com" target="_blank">Slack&lt;/a>
+- one that made me ask &amp;ldquo;Why is this &lt;em>even&lt;/em> a feature?&amp;rdquo;&lt;/p>
+&lt;p>Like any good responsible software engineer, instead of taking to social media or forums to post about the exploit - I opted to report it to &lt;a href="https://hackerone.com" target="_blank">HackerOne&lt;/a>
+- where Slack accepts reports of potential security exploits. After giving a detailed list of instructions on how to achive it (Report #2171907).&lt;/p></description></item><item><title>I Think I Found a Privacy Exploit in ChatGPT</title><link>https://tane.dev/2023/04/i-think-i-found-a-privacy-exploit-in-chatgpt/</link><pubDate>Fri, 14 Apr 2023 00:50:00 +0100</pubDate><guid>https://tane.dev/2023/04/i-think-i-found-a-privacy-exploit-in-chatgpt/</guid><description>&lt;p>&lt;code>&amp;gt; tl;dr: I discovered that passing empty prompts to ChatGPT still&lt;/code> &lt;a href="https://stochasticparrot.lol/" target="_blank">generates responses&lt;/a>
+&lt;code>Initially, I thought these might be hallucinations, but now I suspect they could also include other users' responses from the API&lt;/code>&lt;/p>
+&lt;p>Last month, OpenAI unveiled their advanced large language model, &lt;a href="https://openai.com/product/gpt-4" target="_blank">ChatGPT-4&lt;/a>
+, attracting attention from developers, enterprises, media, and &lt;a href="https://www.theguardian.com/technology/2023/mar/31/italy-privacy-watchdog-bans-chatgpt-over-data-breach-concerns" target="_blank">governments&lt;/a>
+alike.&lt;/p>
+&lt;p>Before receiving my GPT-4 invite, I experimented with &lt;a href="ttps://github.com/antimatter15/alpaca.cpp">alpaca.cpp&lt;/a>
+, designed to run models on CPU&amp;rsquo;s with limited memory constraints. I began by developing a simple web interface using NodeJS and sockets for parsing the command line. Once I started working with the GPT-4 API, I quickly realized that with the right prompts, it could be a powerful tool. It has already helped me rewrite complex code into simpler methods and reduce complexity by moving code to functions:&lt;/p></description></item><item><title>Announcing Formula - A Zero-Config Reactive Forms Library for Svelte</title><link>https://tane.dev/2021/02/announcing-formula-a-zero-config-reactive-forms-library-for-svelte/</link><pubDate>Sat, 13 Feb 2021 12:00:00 +0100</pubDate><guid>https://tane.dev/2021/02/announcing-formula-a-zero-config-reactive-forms-library-for-svelte/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://svelte.dev/repl/7ec545c5415049d1a51167d1ac10b137" target="_blank">Demo&lt;/a>
+&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/svelte-formula" target="_blank">NPM Page&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;p>Today I&amp;rsquo;m happy to announce the release of &lt;a href="https://www.npmjs.com/package/svelte-formula" target="_blank">Svelte Formula&lt;/a>
+- a new forms
+library for &lt;a href="https://svelte.dev" target="_blank">Svelte&lt;/a>
+.&lt;/p>
+&lt;div style="text-align: center">
+&lt;img width="250px" height="250px" src="https://tane.dev/images/formula-logo.png" alt="The Svelte Formula Logo is some science beakers and a molecule">
+&lt;/div>
+&lt;p>Formula is a &lt;code>Zero-Config&lt;/code> library - what this means is that you do not have to pass any settings to the library itself
+to handle form validation and submission - it uses the validation properties of HTML5 forms directly, meaning you can
+create progressive, accessible forms first.&lt;/p></description></item><item><title>Revisiting Dark patterns with the HTML &lt;dialog> tag</title><link>https://tane.dev/2021/02/revisiting-dark-patterns-with-the-html-dialog-tag/</link><pubDate>Mon, 08 Feb 2021 22:50:00 +0100</pubDate><guid>https://tane.dev/2021/02/revisiting-dark-patterns-with-the-html-dialog-tag/</guid><description>&lt;p>Every once in a while I&amp;rsquo;ll see frontend developers tweet or blog about how great the
+HTML &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank">dialog&lt;/a>
+tag is and each time I&amp;rsquo;m reminded me of
+an &lt;a href="https://tinynodes.medium.com/dark-patterns-with-the-html-5-2-dialog-tag-and-chrome-for-fun-and-profit-249ce092d200" target="_blank">old Medium post&lt;/a>
+I made a few years ago about its use.&lt;/p>
+&lt;p>The &lt;strong>good&lt;/strong> news is in 2021 it&amp;rsquo;s much harder to use it to crash a user&amp;rsquo;s browser - in
+Firefox &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=840640" target="_blank">dialog.showModal is behind a flag&lt;/a>
+so it has to be
+specifically enabled by users. In all browsers &lt;strong>preferred&lt;/strong> way to use this tag in 2021 is to use the &lt;code>open&lt;/code> attribute
+which is a much more sensible way of using the tag. However, it
+is &lt;a href="https://stackblitz.com/edit/dialog-dark-patterns-property" target="_blank">still possible&lt;/a>
+to do some things mentioned below
+and &lt;a href="https://tane.dev/images/firefox-dialog-performance.png">kill browser performance&lt;/a>
+(and it&amp;rsquo;s still possible to steal focus in
+Chrome).&lt;/p></description></item><item><title>WebSerial.app - Browser to USB Serial Communication With Svelte</title><link>https://tane.dev/2021/02/webserial.app-browser-to-usb-serial-communication-with-svelte/</link><pubDate>Fri, 05 Feb 2021 21:00:00 +0100</pubDate><guid>https://tane.dev/2021/02/webserial.app-browser-to-usb-serial-communication-with-svelte/</guid><description>&lt;p>After
+my &lt;a href="https://tane.dev/2021/01/web-serial-api-with-rxjs-two-way-reactive-communication-between-browser-and-serial-hardware/" target="_blank">previous experiments&lt;/a>
+with the Web Serial API, I started experimenting with &lt;a href="https://svelte.dev/" target="_blank">Svelte&lt;/a>
+.&lt;/p>
+&lt;p>Within a couple of days I have created &lt;a href="https://webserial.app/" target="_blank">https://webserial.app/&lt;/a>
+- the Web Serial Controller app.&lt;/p>
+&lt;p>The interface might seem familiar - it&amp;rsquo;s based on &lt;a href="https://webserial.app/" target="_blank">XP.css&lt;/a>
+- a Windows XP CSS theme. It was
+inspired by some of the Serial hardware software used in the 00&amp;rsquo;s.&lt;/p>
+&lt;p>&lt;img src="https://tane.dev/images/web-serial-api-screenshot.png" alt="The interface of Web Serial Controller">&lt;/p>
+&lt;p>The application is &lt;a href="https://github.com/tanepiper/web-serial-controller" target="_blank">fully open source&lt;/a>
+and features:&lt;/p>
+&lt;ul>
+&lt;li>Fully connected state - use the screens or keyboard shortcuts to connect and disconnect from devices with shared state&lt;/li>
+&lt;li>Filter devices by vendor ID with a fully searchable list of all hardware vendors&lt;/li>
+&lt;li>A draggable interface XP-like interface&lt;/li>
+&lt;li>Options storage in &lt;code>localStorage&lt;/code>&lt;/li>
+&lt;li>Send text messages to any connected device&lt;/li>
+&lt;/ul></description></item></channel></rss>

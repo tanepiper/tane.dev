@@ -1,0 +1,61 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenAI on tane.dev</title><link>https://tane.dev/tags/openai/</link><description>Recent content in OpenAI on tane.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>This work is copyright Tane Piper</copyright><lastBuildDate>Fri, 14 Apr 2023 00:50:00 +0100</lastBuildDate><atom:link href="https://tane.dev/tags/openai/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Serial API with RxJS - Two-Way Reactive Communication between Browser and Serial Hardware</title><link>https://tane.dev/2021/01/web-serial-api-with-rxjs-two-way-reactive-communication-between-browser-and-serial-hardware/</link><pubDate>Sat, 30 Jan 2021 12:00:00 +0100</pubDate><guid>https://tane.dev/2021/01/web-serial-api-with-rxjs-two-way-reactive-communication-between-browser-and-serial-hardware/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://rxjs-from-web-serial.stackblitz.io/" target="_blank">Demo Link&lt;/a>
+&lt;/li>
+&lt;li>&lt;a href="https://stackblitz.com/edit/rxjs-from-web-serial?file=index.ts" target="_blank">Demo Source&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;p>Version 89 of Chrome and Edge browsers have released the &lt;a href="https://reillyeon.github.io/serial/" target="_blank">Web Serial API&lt;/a>
+unflagged
+which means as user it&amp;rsquo;s now available for general use rather than being locked behind experimental flags (if you&amp;rsquo;re
+on an earlier version you can enable &lt;strong>Experimental Web Platform features&lt;/strong> in &lt;code>chrome://flags&lt;/code>)&lt;/p>
+&lt;p>The API allows for communication between the browser and supported serial hardware such
+as &lt;a href="https://www.arduino.cc/" target="_blank">Arduino&lt;/a>
+or &lt;a href="https://www.raspberrypi.org/" target="_blank">RaspberryPi&lt;/a>
+over USB Serial connection - the
+device registers as available to the browser and a port can be opened.&lt;/p></description></item><item><title>Create your own Dark Mode Detection Observable using RxJS and Media Queries</title><link>https://tane.dev/2021/01/create-your-own-dark-mode-detection-observable-using-rxjs-and-media-queries/</link><pubDate>Wed, 27 Jan 2021 21:00:00 +0100</pubDate><guid>https://tane.dev/2021/01/create-your-own-dark-mode-detection-observable-using-rxjs-and-media-queries/</guid><description>&lt;p>&lt;a href="https://stackblitz.com/edit/rxjs-media-query-observable" target="_blank">Demo Link&lt;/a>
+&lt;/p>
+&lt;p>One of the more recent features available in browsers is ability to
+do &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">CSS Media Queries&lt;/a>
+based on user
+theme &amp;amp; accessibility settings in the operating system - for example using &lt;code>@media (prefers-color-scheme: dark)&lt;/code>
+(see &lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme" target="_blank">prefers-color-scheme&lt;/a>
+)
+you can check if the users OS theme is currently in Dark Mode and use this to set a websites theme accordingly.&lt;/p>
+&lt;p>The query is also available in JavaScript using
+the &lt;a href="https://developer.mozilla.org/en-us/docs/Web/API/Window/matchMedia" target="_blank">window.matchMedia&lt;/a>
+function - that returns a
+&lt;code>MediaListQuery&lt;/code> that will allow us to do two things:&lt;/p></description></item><item><title>Creating Custom RxJS Operators</title><link>https://tane.dev/2021/01/creating-custom-rxjs-operators/</link><pubDate>Mon, 25 Jan 2021 00:15:00 +0100</pubDate><guid>https://tane.dev/2021/01/creating-custom-rxjs-operators/</guid><description>&lt;p>&lt;a href="https://rxjs.dev" target="_blank">RxJS&lt;/a>
+is a popular library available for &lt;a href="https://www.typescriptlang.org/" target="_blank">TypeScript&lt;/a>
+and
+JavaScript.&lt;/p>
+&lt;p>It provides APIs for the creation of applications and libraries using asynchronous streams of data and reactive methods.
+It&amp;rsquo;s one of the foundation libraries of &lt;a href="https://angular.io" target="_blank">Angular&lt;/a>
+.&lt;/p>
+&lt;p>Included in it are over 100 operators - functions that take an Observable stream of data and return values for use in
+chains of operators.&lt;/p>
+&lt;p>Many of the operators are low level, and combining them through the &lt;code>pipe&lt;/code> method they create a powerful way to work
+with data.&lt;/p></description></item><item><title>RxJS Ninja Updates - New operators for math and working with streams</title><link>https://tane.dev/2021/01/rxjs-ninja-updates-new-operators-for-math-and-working-with-streams/</link><pubDate>Thu, 14 Jan 2021 00:15:00 +0100</pubDate><guid>https://tane.dev/2021/01/rxjs-ninja-updates-new-operators-for-math-and-working-with-streams/</guid><description>&lt;p>Since the last update on &lt;a href="https://rxjs.ninja" target="_blank">RxJS Ninja&lt;/a>
+there have been a few new operators added, below are some details
+and links to StackBlitz demos showing them in action.&lt;/p>
+&lt;h3 id="numbers-and-math-operators">Numbers and Math operators&lt;/h3>
+&lt;p>In &lt;code>@rxjs-ninja/rxjs-number&lt;/code> the missing &lt;a href="https://rxjs.ninja/modules/number.html#tofixed" target="_blank">toFixed&lt;/a>
+operator has been
+added, alongside a new custom &lt;a href="https://rxjs.ninja/modules/number.html#tohex" target="_blank">toHex&lt;/a>
+operator and the
+corresponding &lt;a href="https://rxjs.ninja/modules/number.html#parsehex" target="_blank">parseHex&lt;/a>
+one allowing hex numbers to be worked with (
+such as converting colours)&lt;/p>
+&lt;p>There are also new operators for some basic math - &lt;a href="https://rxjs.ninja/modules/number.html#add" target="_blank">add&lt;/a>
+, &lt;a href="https://rxjs.ninja/modules/number.html#sub" target="_blank">sub&lt;/a>
+, &lt;a href="https://rxjs.ninja/modules/number.html#div" target="_blank">div&lt;/a>
+,
+&lt;a href="https://rxjs.ninja/modules/number.html#mul" target="_blank">mul&lt;/a>
+, &lt;a href="https://rxjs.ninja/modules/number.html#mod" target="_blank">mod&lt;/a>
+and
+&lt;a href="https://rxjs.ninja/modules/number.html#pow" target="_blank">pow&lt;/a>
+all allowing you to modify source numbers, all accept a number, or an
+Observable number source.&lt;/p></description></item><item><title>RxJS Primitives is now RxJS Ninja</title><link>https://tane.dev/2020/11/rxjs-primitives-is-now-rxjs-ninja/</link><pubDate>Mon, 23 Nov 2020 00:01:00 +0100</pubDate><guid>https://tane.dev/2020/11/rxjs-primitives-is-now-rxjs-ninja/</guid><description>&lt;p>&lt;img src="https://raw.githubusercontent.com/rxjs-ninja/rxjs-ninja/main/assets/logo.png" alt="RxJS Ninja Logo is a Ninja jumping over a crescent moon">&lt;/p>
+&lt;p>Today I&amp;rsquo;ve re-released RxJS Primitives as &lt;a href="https://rxjs.ninja" target="_blank">RxJS Ninja&lt;/a>
+. The new libraries have been published as the same last versions
+under their old name, so it&amp;rsquo;s easy to migrate to the new version - all now published under &lt;code>@rxjs-ninja&lt;/code> instead of &lt;code>@tinynodes&lt;/code>
+(a deprecation notice has also been left the old packages).&lt;/p></description></item></channel></rss>
