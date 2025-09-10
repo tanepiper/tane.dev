@@ -1,4 +1,7 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Media Query on tane.dev</title><link>https://tane.dev/tags/media-query/</link><description>Recent content in Media Query on tane.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>This work is copyright Tane Piper</copyright><lastBuildDate>Wed, 27 Jan 2021 21:00:00 +0100</lastBuildDate><atom:link href="https://tane.dev/tags/media-query/index.xml" rel="self" type="application/rss+xml"/><item><title>Slack wants you you know this privacy exploit is fine</title><link>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</link><pubDate>Mon, 25 Sep 2023 19:50:00 +0100</pubDate><guid>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</guid><description>&lt;p>Last week, after a call with the engineers on my team I wanted to send a message to two of the engineers at the same time - little did I know I&amp;rsquo;d find what I believe to be a nasty privacy exploit in &lt;a href="https://slack.com" target="_blank">Slack&lt;/a>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Media Query on tane.dev</title><link>https://tane.dev/tags/media-query/</link><description>Recent content in Media Query on tane.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>This work is copyright Tane Piper</copyright><lastBuildDate>Wed, 27 Jan 2021 21:00:00 +0100</lastBuildDate><atom:link href="https://tane.dev/tags/media-query/index.xml" rel="self" type="application/rss+xml"/><item><title>Oh no, not again... a meditation on NPM supply chain attacks</title><link>https://tane.dev/2025/09/oh-no-not-again...-a-meditation-on-npm-supply-chain-attacks/</link><pubDate>Tue, 09 Sep 2025 12:00:00 +0100</pubDate><guid>https://tane.dev/2025/09/oh-no-not-again...-a-meditation-on-npm-supply-chain-attacks/</guid><description>&lt;p>I&amp;rsquo;ve been sitting on this article for a while now – well over a year I&amp;rsquo;ve put off publishing it – but as we&amp;rsquo;ve seen this week, the time has come to lift the veil and say the quiet part out loud:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>It&amp;rsquo;s 2025; Microsoft should be considered a &amp;ldquo;bad actor&amp;rdquo; and a threat to all companies who develop software.&lt;/strong>&lt;/p>&lt;/blockquote>
+&lt;p>Of course, if you&amp;rsquo;re old enough to remember – this is not the first time either&amp;hellip;&lt;/p></description></item><item><title>Slack wants you you know this privacy exploit is fine</title><link>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</link><pubDate>Mon, 25 Sep 2023 19:50:00 +0100</pubDate><guid>https://tane.dev/2023/09/slack-wants-you-you-know-this-privacy-exploit-is-fine/</guid><description>&lt;p>Last week, after a call with the engineers on my team I wanted to send a message to two of the engineers at the same time - little did I know I&amp;rsquo;d find what I believe to be a nasty privacy exploit in &lt;a href="https://slack.com" target="_blank">Slack&lt;/a>
 - one that made me ask &amp;ldquo;Why is this &lt;em>even&lt;/em> a feature?&amp;rdquo;&lt;/p>
 &lt;p>Like any good responsible software engineer, instead of taking to social media or forums to post about the exploit - I opted to report it to &lt;a href="https://hackerone.com" target="_blank">HackerOne&lt;/a>
 - where Slack accepts reports of potential security exploits. After giving a detailed list of instructions on how to achive it (Report #2171907).&lt;/p></description></item><item><title>I Think I Found a Privacy Exploit in ChatGPT</title><link>https://tane.dev/2023/04/i-think-i-found-a-privacy-exploit-in-chatgpt/</link><pubDate>Fri, 14 Apr 2023 00:50:00 +0100</pubDate><guid>https://tane.dev/2023/04/i-think-i-found-a-privacy-exploit-in-chatgpt/</guid><description>&lt;p>&lt;code>&amp;gt; tl;dr: I discovered that passing empty prompts to ChatGPT still&lt;/code> &lt;a href="https://stochasticparrot.lol/" target="_blank">generates responses&lt;/a>
@@ -36,22 +39,4 @@ is &lt;a href="https://stackblitz.com/edit/dialog-dark-patterns-property" target
 to do some things mentioned below
 and &lt;a href="https://tane.dev/images/firefox-dialog-performance.png">kill browser performance&lt;/a>
 (and it&amp;rsquo;s still possible to steal focus in
-Chrome).&lt;/p></description></item><item><title>WebSerial.app - Browser to USB Serial Communication With Svelte</title><link>https://tane.dev/2021/02/webserial.app-browser-to-usb-serial-communication-with-svelte/</link><pubDate>Fri, 05 Feb 2021 21:00:00 +0100</pubDate><guid>https://tane.dev/2021/02/webserial.app-browser-to-usb-serial-communication-with-svelte/</guid><description>&lt;p>After
-my &lt;a href="https://tane.dev/2021/01/web-serial-api-with-rxjs-two-way-reactive-communication-between-browser-and-serial-hardware/" target="_blank">previous experiments&lt;/a>
-with the Web Serial API, I started experimenting with &lt;a href="https://svelte.dev/" target="_blank">Svelte&lt;/a>
-.&lt;/p>
-&lt;p>Within a couple of days I have created &lt;a href="https://webserial.app/" target="_blank">https://webserial.app/&lt;/a>
-- the Web Serial Controller app.&lt;/p>
-&lt;p>The interface might seem familiar - it&amp;rsquo;s based on &lt;a href="https://webserial.app/" target="_blank">XP.css&lt;/a>
-- a Windows XP CSS theme. It was
-inspired by some of the Serial hardware software used in the 00&amp;rsquo;s.&lt;/p>
-&lt;p>&lt;img src="https://tane.dev/images/web-serial-api-screenshot.png" alt="The interface of Web Serial Controller">&lt;/p>
-&lt;p>The application is &lt;a href="https://github.com/tanepiper/web-serial-controller" target="_blank">fully open source&lt;/a>
-and features:&lt;/p>
-&lt;ul>
-&lt;li>Fully connected state - use the screens or keyboard shortcuts to connect and disconnect from devices with shared state&lt;/li>
-&lt;li>Filter devices by vendor ID with a fully searchable list of all hardware vendors&lt;/li>
-&lt;li>A draggable interface XP-like interface&lt;/li>
-&lt;li>Options storage in &lt;code>localStorage&lt;/code>&lt;/li>
-&lt;li>Send text messages to any connected device&lt;/li>
-&lt;/ul></description></item></channel></rss>
+Chrome).&lt;/p></description></item></channel></rss>
